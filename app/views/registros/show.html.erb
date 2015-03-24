@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @registro.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @registro.email %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @registro.string %>
+</p>
+
+<%= link_to 'Edit', edit_registro_path(@registro) %> |
+<%= link_to 'Back', registros_path %>

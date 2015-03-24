@@ -1,29 +1,23 @@
 <%= form_for(@registro) do |f| %>
   <% if @registro.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@registro.errors.count, "error") %> prohibited this registro from being saved:</h2>
+      <h2><%= pluralize(@registro.errors.count, "error") %> prohibited this lead from being saved:</h2>
 
       <ul>
-      <% @registro.errors.full_messages.each do |message| %>
+      <% @lead.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
+  <div class="form-group" >
+    <%= f.label :name %>
+    <%= f.text_field :name %> 
+
+    <%= f.label :email %>
     <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :string %><br>
-    <%= f.text_field :string %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+    <%= f.submit "Regístrate" %>
   </div>
 <% end %>

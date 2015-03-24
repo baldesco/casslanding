@@ -1,10 +1,10 @@
 <%= form_for(@registro) do |f| %>
   <% if @registro.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@registro.errors.count, "error") %> prohibited this lead from being saved:</h2>
+      <h2><%= pluralize(@registro.errors.count, "error") %> prohibited this register from being saved:</h2>
 
       <ul>
-      <% @lead.errors.full_messages.each do |message| %>
+      <% @registro.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

@@ -28,7 +28,7 @@ class RegistrosController < ApplicationController
 
     respond_to do |format|
       if @registro.save
-        format.html { redirect_to new_registro_path, notice: 'Registro was successfully created.' }
+        format.html { redirect_to new_registro_path, notice: 'El registro ha sido exitoso. ¡Te mantendremos informado de los movimientos de Cassiopeia!' }
         format.json { render :show, status: :created, location: @registro }
       else
         format.html { render :new }
